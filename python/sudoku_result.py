@@ -1,12 +1,12 @@
-import pandas as pd
+# import pandas as pd
 from random import randint
-from sklearn.neighbors import KNeighborsClassifier
+# from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 import os
 import random
 import sys
 import cv2
-import matplotlib.pylab as pl
+# import matplotlib.pylab as pl
 import math
 
 
