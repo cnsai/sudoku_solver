@@ -28,7 +28,7 @@
 #### solver.py - 스도쿠 추출
 ![sudoku.jpg](https://github.com/idjoopal/sudoku_solver/blob/master/md/example2.png)
 
-#### solver.py - 숫자 인식 결과(KNN) - 정확도 떨어짐
+#### solver.py - 숫자 인식 결과(KNN 분류 알고리즘) - 정확도 떨어짐
 ![sudoku.jpg](https://github.com/idjoopal/sudoku_solver/blob/master/md/example3.png)
 
 #### sudoku_result.py - 만일 숫자 인식이 잘됐을 경우, 스도쿠 풀이 결과
