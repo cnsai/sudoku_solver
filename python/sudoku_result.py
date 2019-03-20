@@ -1,12 +1,6 @@
-# import pandas as pd
 from random import randint
-# from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
-import os
-import random
-import sys
 import cv2
-# import matplotlib.pylab as pl
 import math
 
 
@@ -16,11 +10,11 @@ with open("sudoku_output.txt") as ansFile:
 check = int(ans[0][0])
 
 if(check == -1):
-	print ("****************Sudoku could not be solved. Try for another Image.****************\n")
-	#os.system("rm testingdata.txt")
-	#os.system("rm sudoku_input.txt")
-	#os.system("rm sudoku_output.txt")
-	exit()
+    print ("****************Sudoku could not be solved. Try for another Image.****************\n")
+    #os.system("rm testingdata.txt")
+    #os.system("rm sudoku_input.txt")
+    #os.system("rm sudoku_output.txt")
+    exit()
 
 
 # load image
@@ -33,7 +27,7 @@ image_sudoku_gray = cv2.cvtColor(image_sudoku_original,cv2.COLOR_BGR2GRAY)
 thresh = cv2.adaptiveThreshold(image_sudoku_gray,255,1,1,11,15)
 
 # find the countours
-hierarchy, contours0, hierarchy = cv2.findContours(thresh,
+contours0, hierarchy = cv2.findContours(thresh,
                                         cv2.RETR_LIST,
                                         cv2.CHAIN_APPROX_SIMPLE)
 
@@ -114,13 +108,10 @@ finalimg = cv2.cvtColor(warp, cv2.COLOR_BGR2GRAY)
 #imgout = cv2.imread("sudoku.jpg")
 font = cv2.FONT_HERSHEY_SCRIPT_SIMPLEX
 for i in range(0,9):
-	for j in range(0,9):
-		#if (valid[i][j] == 1):
-		#	vy=1
-		#else:
-		cv2.putText(finalimg, str(ans[i][j]), (j*28+5,i*28+23), font, 0.7, (0,0,0), 2)
+    for j in range(0,9):
+        cv2.putText(finalimg, str(ans[i][j]), (j*28+5,i*28+23), font, 0.7, (0, 0, 0), 2)
 
 #cv2.putText(finalimg,'0',(28,28), font, 1,(0,0,0),2)	
-cv2.imshow("Result",finalimg)
+cv2.imshow("Result", finalimg)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

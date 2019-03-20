@@ -20,7 +20,7 @@ preds = clf.predict(test)
 #b=[i for i, j in zip(preds, ans) if i == j]
 #print b
 #print len(b)
-print preds
+print(preds)
 outfile = open('output.txt', 'w')
 k = 0
 for i in range(0,9):

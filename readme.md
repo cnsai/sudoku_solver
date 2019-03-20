@@ -8,14 +8,28 @@
     - 인쇄된 숫자 (jpg) (training 폴더)
 
 - python/solver.py 실행
-  - 스도쿠 사진은 python/sudoku_img에서 선정, 코드변경필요
-  - 스도쿠 특징추출한 testingdata.txt 생성됨
+  - ./python/sudoku_img/sudoku.jpg 사용함
+  - 숫자 인식을 위한 testingdata.txt 생성됨
   - 스도쿠 KNN 결과 sudoku_input.txt 생성됨
 
-- Debug/sudoku_rocognizer.exe 실행
-  - sudoku_input.txt가 제대로 인식을 했다면, sudoku_output.txt 생성됨
+- python/sudoku_algorithm.py 실행
+  - 인식이 성공하여 sudoku_input.txt가 제대로 된 스도쿠 문제라면, sudoku_output.txt 생성됨
 
 - python/sudoku_result.py 실행
-  - 스도쿠 사진은 solver.py에서 사용한 이미지, 코드변경필요
+  - 스도쿠 사진은 solver.py에서 사용한 이미지.
   - sudoku_output.txt가 제대로 생성되었다면 인식한 스도쿠사진에 스도쿠 결과가 오버레이 되어 출력
- 
+
+#### 원본 스도쿠 사진
+![sudoku.jpg](https://github.com/idjoopal/sudoku_solver/blob/master/python/sudoku_img/sudoku.jpg)
+
+#### solver.py - 스도쿠 경계인식
+![sudoku.jpg](https://github.com/idjoopal/sudoku_solver/blob/master/md/example1.png)
+
+#### solver.py - 스도쿠 추출
+![sudoku.jpg](https://github.com/idjoopal/sudoku_solver/blob/master/md/example2.png)
+
+#### solver.py - 숫자 인식 결과(KNN) - 정확도 떨어짐
+![sudoku.jpg](https://github.com/idjoopal/sudoku_solver/blob/master/md/example3.png)
+
+#### sudoku_result.py - 만일 숫자 인식이 잘됐을 경우, 스도쿠 풀이 결과
+![sudoku.jpg](https://github.com/idjoopal/sudoku_solver/blob/master/md/example4.png)
