@@ -26,7 +26,7 @@ image_sudoku_gray = cv2.cvtColor(image_sudoku_original,cv2.COLOR_BGR2GRAY)
 thresh = cv2.adaptiveThreshold(image_sudoku_gray,255,1,1,11,15)
 
 # find the countours
-hierarchy, contours0, hierarchy = cv2.findContours(thresh,
+contours0, hierarchy = cv2.findContours(thresh,
                                         cv2.RETR_LIST,
                                         cv2.CHAIN_APPROX_SIMPLE)
 
