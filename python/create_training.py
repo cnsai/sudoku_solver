@@ -1,7 +1,5 @@
-from PIL import Image
 import cv2
 import glob
-import sys
 import numpy as np
 import os
 
@@ -14,7 +12,6 @@ traincnt = 0
 print("=====Start printed num dataset=====")
 for foldername in range(1,10):
 	for img in glob.glob("data/training/"+str(foldername)+"/*.jpg"):
-		#print "hello "
 		f2.write(str(foldername))
 		f2.write('\n')
 		im = cv2.imread(img,0)

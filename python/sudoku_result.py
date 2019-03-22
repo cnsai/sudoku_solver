@@ -1,4 +1,3 @@
-from random import randint
 import numpy as np
 import cv2
 import math

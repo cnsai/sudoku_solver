@@ -1,17 +1,14 @@
-import pandas as pd
-from random import randint
 from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
-import os
-import random
-import sys
 import cv2
 import matplotlib.pylab as pl
 import math
 
+###################
+## 윤곽선 뽑아내기 ##
+###################
+
 f1 = open('testingdata.txt', 'w')
-
-
 # load image
 image_sudoku_original = cv2.imread('./sudoku_img/sudoku.jpg')
 
@@ -63,11 +60,15 @@ _ = pl.imshow(image_sudoku_candidates, cmap=pl.gray())
 _ = pl.axis("off")
 _ = pl.show()
 
+
+#########################
+## 정사각형으로 바로잡기  ##
+#########################
+
 IMAGE_WIDHT = 28
 IMAGE_HEIGHT = 28
 SUDOKU_SIZE = 9
 N_MIN_ACTVE_PIXELS = 10
-
 
 # sort the corners to remap the image
 def getOuterPoints(rcCorners):
